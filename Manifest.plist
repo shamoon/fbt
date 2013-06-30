@@ -14,7 +14,7 @@
        <key>CFBundleShortVersionString</key>
        <string>1.0</string>
        <key>URL</key>
-       <string>http://sourceforge.net/projects/feedlybtabs-saf/files/Feedly-Background-Tabs.safariextz/download</string>
+       <string>https://github.com/nikonratm/feedlybackgroundtabs/blob/master/Feedly-Background-Tabs.safariextz</string>
      </dict>
    </array>
 </dict>
