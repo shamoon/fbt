@@ -1,7 +1,9 @@
 function messageHandler(event) {
-    if (event.name === 'openBackgroundTab') {
+    if (event.name === 'openFeedlyBackgroundTab') {
         var tab = safari.application.activeBrowserWindow.openTab('background');
         tab.url = event.message;
+            event.stopPropagation();
+            event.preventDefault();
     }
     else if (event.name === 'getSettingValue') {
         sendSettingValueFor(event.message);
