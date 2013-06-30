@@ -51,7 +51,7 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://sourceforge.net/projects/feedlybtabs-saf/files/Manifest.plist/download</string>
+	<string>https://raw.github.com/nikonratm/feedlybackgroundtabs/master/Manifest.plist</string>
 	<key>Website</key>
 	<string>http://michaelshamoon.com/</string>
 </dict>
