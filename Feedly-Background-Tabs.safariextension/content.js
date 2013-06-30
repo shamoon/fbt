@@ -29,7 +29,7 @@ if (document.location.host.indexOf('.feedly.') !== -1) {
             event.stopPropagation();
             event.preventDefault();
             safari.self.tab.dispatchMessage('openBackgroundTab',
-                current.getElementsByTagName('a')[0].getAttribute('href'));
+                current.getAttribute('data-alternate-link');
         }
     }, true);
 }
