@@ -2,7 +2,7 @@
 // with minor modifications by michaelshamoon.com
 // Safari extension whitelist wildcards are very limited. To work around the problem,
 // we allow any domain in the extension whitelist, and check for feedly domain here.
-if (document.location.host.indexOf('.feedly.') !== -1) {
+if (document.location.host.indexOf('feedly.com') !== -1) {
     // Request the shortcut key setting from the global script; this injected
     // script lacks access to the extension settings object.
     var shortcutKey = 'v'.charCodeAt(0);
