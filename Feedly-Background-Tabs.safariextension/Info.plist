@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Michael Shamoon</string>
 	<key>Builder Version</key>
-	<string>9537.71</string>
+	<string>10600.1.25.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>Feedly Background Tabs</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.21</string>
+	<string>1.22</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Chrome</key>
@@ -32,12 +32,14 @@
 		</dict>
 		<key>Whitelist</key>
 		<array>
-			<string>http://*/*</string>
+			<string>http://feedly.com/*</string>
 			<string>https://*/*</string>
 		</array>
 	</dict>
 	<key>Description</key>
 	<string>Add a shortcut key to open a new tab for the selected item in Feedly. Original ext by nox.cx/zakj</string>
+	<key>DeveloperIdentifier</key>
+	<string>6236H6BCAU</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>

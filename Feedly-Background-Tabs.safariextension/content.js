@@ -21,7 +21,7 @@ if (document.location.host.indexOf('feedly.com') !== -1) {
 
         // Catch the shortcut key, but ignore modified key presses.
         if (event.which === shortcutKey && !event.ctrlKey && !event.metaKey) {
-            var currents = document.getElementsByClassName('selectedentry');
+            var currents = document.getElementsByClassName('selectedEntry');
             var current = currents[0];
             var url = current.getAttribute('data-alternate-link');
             if (!url || url == '') {
