@@ -16,6 +16,8 @@
        <key>URL</key>
        <string>https://raw.github.com/nikonratm/feedlybackgroundtabs/master/Feedly-Background-Tabs.safariextz</string>
      </dict>
+     <key>Update From Gallery</key>
+     <true/>
    </array>
 </dict>
 </plist>
