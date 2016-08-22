@@ -7,12 +7,12 @@ if (document.location.host.indexOf('feedly.com') !== -1) {
     // script lacks access to the extension settings object.
     var shortcutKey = 'v'.charCodeAt(0);
     safari.self.tab.dispatchMessage('getSettingValue', 'key');
-    safari.self.addEventListener('message', function (event) {
+    safari.self.addEventListener('message', function(event) {
         if (event.name === 'settingValueIs')
             shortcutKey = event.message.charCodeAt(0);
     }, false);
 
-    document.addEventListener('keypress', function (event) {
+    document.addEventListener('keypress', function(event) {
         // Ignore keypresses on some common form elements.
         var tag = event.target.tagName;
         if (tag === 'TEXTAREA' || tag === 'INPUT' || tag === 'SELECT') {
@@ -21,14 +21,12 @@ if (document.location.host.indexOf('feedly.com') !== -1) {
 
         // Catch the shortcut key, but ignore modified key presses.
         if (event.which === shortcutKey && !event.ctrlKey && !event.metaKey) {
-            var currents = document.getElementsByClassName('selectedEntry');
+           // if at first you do not succeed... cycle through Feedly's different current entry classes
+            var currents = document.getElementsByClassName('selected entry');
+            if (currents.length == 0) currents = document.getElementsByClassName('selectedEntry');
+            if (currents.length == 0) currents = document.getElementsByClassName('u100Entry');
             var current = currents[0];
             var url = current.getAttribute('data-alternate-link');
-            if (!url || url == '') {
-            	currents = current.getElementsByClassName('u100Entry');
-	            current = currents[0];
-	            url = current.getAttribute('data-alternate-link');
-	        }
             if (!url || url == '') {
                 return;
             }
