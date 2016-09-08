@@ -1,11 +1,15 @@
 function messageHandler(event) {
+   console.log(event);
     if (event.name === 'openFeedlyBackgroundTab') {
         var tab = safari.application.activeBrowserWindow.openTab('background');
         tab.url = event.message;
             event.stopPropagation();
             event.preventDefault();
-    }
-    else if (event.name === 'getSettingValue') {
+    } else if (event.name === 'getSettings') {
+      console.log('getsettings');
+        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('settings',
+        [safari.extension.settings.key, safari.extension.settings.debug]);
+    } else if (event.name === 'getSettingValue') {
         sendSettingValueFor(event.message);
     }
 }

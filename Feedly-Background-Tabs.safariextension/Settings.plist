@@ -12,5 +12,13 @@
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
+	<dict>
+		<key>Key</key>
+		<string>debug</string>
+		<key>Title</key>
+		<string>Debug</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
 </array>
 </plist>
