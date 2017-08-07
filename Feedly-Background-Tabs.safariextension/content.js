@@ -26,9 +26,14 @@ if (document.location.host.indexOf('feedly.com') !== -1) {
         // Catch the shortcut key, but ignore modified key presses.
         if (event.which === shortcutKey && !event.ctrlKey && !event.metaKey) {
             // if at first you do not succeed... cycle through Feedly's different current entry classes
-            var currents = document.getElementsByClassName('selected entry');
-            if (debug) console.log('[feedly background tabs] currents found w/ "selected entry": ');
+            var currents = document.getElementsByClassName('selected inlineFrame');
+            if (debug) console.log('[feedly background tabs] currents found w/ "selected inlineFrame": ');
             if (debug) console.log(currents);
+            if (currents.length == 0) {
+            var currents = document.getElementsByClassName('selected entry');
+               if (debug) console.log('[feedly background tabs] currents found w/ "selected entry": ');
+               if (debug) console.log(currents);
+            }
             if (currents.length == 0) {
                 currents = document.getElementsByClassName('selectedEntry');
                 if (debug) console.log('[feedly background tabs] currents found w/ "selectedEntry": ');
