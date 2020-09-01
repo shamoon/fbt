@@ -19,7 +19,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         case "openFeedlyBackgroundTab" :
             if let url = URL(string: userInfo!["url"] as! String) {
                 SFSafariApplication.getActiveWindow { (activeWindow) in
-                    activeWindow?.openTab(with: url, makeActiveIfPossible: false)
+                    activeWindow?.openTab(with: url, makeActiveIfPossible: false, completionHandler: { _ in
+                    })
                 }
             }
         default:

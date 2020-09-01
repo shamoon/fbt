@@ -11,7 +11,6 @@
 		1108A3EB2319C7D3004EB475 /* help-page.html in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C02319C7D2004EB475 /* help-page.html */; };
 		1108A3EC2319C7D3004EB475 /* title-page.html in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C12319C7D2004EB475 /* title-page.html */; };
 		1108A3ED2319C7D3004EB475 /* jekyll-server.command in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C22319C7D2004EB475 /* jekyll-server.command */; };
-		1108A3EE2319C7D3004EB475 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C32319C7D3004EB475 /* Info.plist */; };
 		1108A3EF2319C7D3004EB475 /* page-rel-root.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C52319C7D3004EB475 /* page-rel-root.rb */; };
 		1108A3F02319C7D3004EB475 /* help-filters.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C62319C7D3004EB475 /* help-filters.rb */; };
 		1108A3F12319C7D3004EB475 /* book-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3C72319C7D3004EB475 /* book-icon.png */; };
@@ -335,7 +334,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = MSWD;
 				TargetAttributes = {
 					1108A3B72319C7A6004EB475 = {
@@ -401,7 +400,6 @@
 				1108A3FC2319C7D3004EB475 /* _syntax-highlighting.scss in Resources */,
 				1108A3FE2319C7D3004EB475 /* _base.scss in Resources */,
 				1108A3FF2319C7D3004EB475 /* _config.yml in Resources */,
-				1108A3EE2319C7D3004EB475 /* Info.plist in Resources */,
 				1108A3EA2319C7D3004EB475 /* default.html in Resources */,
 				1108A4022319C7D4004EB475 /* footer.html in Resources */,
 				1108A4012319C7D3004EB475 /* head.html in Resources */,
@@ -535,10 +533,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				INFOPLIST_FILE = "FBT Help/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs.help;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -552,10 +551,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				INFOPLIST_FILE = "FBT Help/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs.help;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -567,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -628,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -684,7 +686,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FBT Extension/Feedly_Background_Tabs_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -693,6 +695,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -707,7 +710,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FBT Extension/Feedly_Background_Tabs_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -716,6 +719,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -733,7 +737,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
@@ -741,6 +745,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -757,7 +762,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
@@ -765,6 +770,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
