@@ -24,7 +24,6 @@
 		1108A4012319C7D3004EB475 /* head.html in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3E52319C7D3004EB475 /* head.html */; };
 		1108A4022319C7D4004EB475 /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3E62319C7D3004EB475 /* footer.html */; };
 		1108A4032319C7D4004EB475 /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3E72319C7D3004EB475 /* header.html */; };
-		1108A4042319C7D4004EB475 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 1108A3E82319C7D3004EB475 /* Makefile */; };
 		1108A4052319C7D4004EB475 /* nav.js in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3E92319C7D3004EB475 /* nav.js */; };
 		1108A4092319CA46004EB475 /* FBT RSS Background Tabs Help.help in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3B82319C7A6004EB475 /* FBT RSS Background Tabs Help.help */; };
 		11E6EA8B2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 11E6EA8A2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements */; };
@@ -454,7 +453,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1108A4042319C7D4004EB475 /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +531,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				INFOPLIST_FILE = "FBT Help/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -551,7 +549,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				INFOPLIST_FILE = "FBT Help/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -686,7 +684,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FBT Extension/Feedly_Background_Tabs_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -710,7 +708,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FBT Extension/Feedly_Background_Tabs_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -737,7 +735,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
@@ -762,7 +760,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
