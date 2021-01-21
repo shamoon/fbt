@@ -17,10 +17,15 @@ document.addEventListener('keypress', function(event) {
 
   // Catch the shortcut key, but ignore modified key presses.
   if (event.which === shortcutKey && !event.ctrlKey && !event.metaKey) {
-     // if at first you do not succeed... cycle through Feedly's different current entry classes
-     var currents = document.getElementsByClassName('selected inlineFrame');
-     if (debug) console.log('[feedly background tabs] currents found w/ "selected inlineFrame": ');
+     var currents = document.getElementsByClassName('inlineFrame--selected');
+     if (debug) console.log('[feedly background tabs] currents found w/ "inlineFrame--selected": ');
      if (debug) console.log(currents);
+     // if at first you do not succeed... cycle through Feedly's different current entry classes
+     if (currents.length == 0) {
+         currents = document.getElementsByClassName('selected inlineFrame');
+         if (debug) console.log('[feedly background tabs] currents found w/ "selected inlineFrame": ');
+         if (debug) console.log(currents);
+     }
      if (currents.length == 0) {
         var currents = document.getElementsByClassName('selected entry');
         if (debug) console.log('[feedly background tabs] currents found w/ "selected entry": ');
