@@ -26,7 +26,6 @@
 		1108A4032319C7D4004EB475 /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3E72319C7D3004EB475 /* header.html */; };
 		1108A4052319C7D4004EB475 /* nav.js in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3E92319C7D3004EB475 /* nav.js */; };
 		1108A4092319CA46004EB475 /* FBT RSS Background Tabs Help.help in Resources */ = {isa = PBXBuildFile; fileRef = 1108A3B82319C7A6004EB475 /* FBT RSS Background Tabs Help.help */; };
-		11E6EA8B2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 11E6EA8A2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements */; };
 		11E6EA8D2315A5C70043CCD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EA8C2315A5C70043CCD6 /* AppDelegate.swift */; };
 		11E6EA902315A5C70043CCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E6EA8E2315A5C70043CCD6 /* Main.storyboard */; };
 		11E6EA922315A5C70043CCD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EA912315A5C70043CCD6 /* ViewController.swift */; };
@@ -108,7 +107,6 @@
 		11E6EAA92315A5C80043CCD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11E6EAAA2315A5C80043CCD6 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		11E6EAAC2315A5C80043CCD6 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
-		11E6EAAE2315A5C80043CCD6 /* Feedly_Background_Tabs_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Feedly_Background_Tabs_Extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +213,7 @@
 		11E6EA7E2315A5C70043CCD6 = {
 			isa = PBXGroup;
 			children = (
+				11E6EA8A2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements */,
 				11E6EA892315A5C70043CCD6 /* FBT RSS Background Tabs */,
 				11E6EAA12315A5C80043CCD6 /* FBT Extension */,
 				1108A3B92319C7A6004EB475 /* FBT Help */,
@@ -236,7 +235,6 @@
 		11E6EA892315A5C70043CCD6 /* FBT RSS Background Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				11E6EA8A2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements */,
 				11E6EA8C2315A5C70043CCD6 /* AppDelegate.swift */,
 				11E6EA8E2315A5C70043CCD6 /* Main.storyboard */,
 				11E6EA912315A5C70043CCD6 /* ViewController.swift */,
@@ -263,7 +261,6 @@
 				11E6EAA92315A5C80043CCD6 /* Info.plist */,
 				11E6EAAA2315A5C80043CCD6 /* script.js */,
 				11E6EAAC2315A5C80043CCD6 /* ToolbarItemIcon.pdf */,
-				11E6EAAE2315A5C80043CCD6 /* Feedly_Background_Tabs_Extension.entitlements */,
 			);
 			path = "FBT Extension";
 			sourceTree = "<group>";
@@ -409,7 +406,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11E6EA8B2315A5C70043CCD6 /* Feedly_Background_Tabs.entitlements in Resources */,
 				11E6EA942315A5C80043CCD6 /* Assets.xcassets in Resources */,
 				1108A4092319CA46004EB475 /* FBT RSS Background Tabs Help.help in Resources */,
 				11E6EA902315A5C70043CCD6 /* Main.storyboard in Resources */,
@@ -531,7 +527,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				INFOPLIST_FILE = "FBT Help/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -549,7 +545,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				INFOPLIST_FILE = "FBT Help/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -683,10 +679,10 @@
 		11E6EAB22315A5C80043CCD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FBT Extension/Feedly_Background_Tabs_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Feedly_Background_Tabs.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -707,10 +703,10 @@
 		11E6EAB32315A5C80043CCD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "FBT Extension/Feedly_Background_Tabs_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Feedly_Background_Tabs.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -733,11 +729,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Feedly_Background_Tabs.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
@@ -758,11 +754,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Feedly_Background_Tabs.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
