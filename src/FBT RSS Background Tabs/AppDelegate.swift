@@ -3,7 +3,7 @@
 //  Feedly Background Tabs
 //
 //  Created by Michael Shamoon on 8/27/19.
-//  Copyright © 2019 Michael Shamoon. All rights reserved.
+//  Copyright © 2019-2021 Michael Shamoon. All rights reserved.
 //
 
 import Cocoa

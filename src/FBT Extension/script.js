@@ -1,22 +1,22 @@
 // This extension was initially inspired by https://github.com/zakj/Google-Reader-Background-Tabs.safariextension
 
-var shortcutKey = 'v'.charCodeAt(0);
+var shortcutKey = 'v';
 var debug = false;
 safari.self.addEventListener('message', messageHandler);
 safari.extension.dispatchMessage('getSettings');
 if (debug) console.log('[feedly background tabs] debug enabled');
 
-document.addEventListener('keypress', function(event) {
-  if (debug) console.log('[feedly background tabs] keypress event');
+window.addEventListener('keydown', function(event) {
+  if (debug) console.log('[feedly background tabs] keydown event');
   if (debug) console.log(event);
-  // Ignore keypresses on some common form elements.
+  // Ignore keydowns on some common form elements.
   var tag = event.target.tagName;
   if (tag === 'TEXTAREA' || tag === 'INPUT' || tag === 'SELECT') {
      return;
   }
 
   // Catch the shortcut key, but ignore modified key presses.
-  if (event.which === shortcutKey && !event.ctrlKey && !event.metaKey) {
+  if (event.key == shortcutKey && !event.ctrlKey && !event.metaKey) {
      var currents = document.getElementsByClassName('inlineFrame--selected');
      if (debug) console.log('[feedly background tabs] currents found w/ "inlineFrame--selected": ');
      if (debug) console.log(currents);
@@ -65,6 +65,7 @@ document.addEventListener('keypress', function(event) {
         return;
      }
      event.stopPropagation();
+     event.stopImmediatePropagation();
      event.preventDefault();
      safari.extension.dispatchMessage('openFeedlyBackgroundTab', { "url" : url });
   }
@@ -72,9 +73,10 @@ document.addEventListener('keypress', function(event) {
 
 
 function messageHandler(event) {
+    console.log(event)
    if (debug) console.log('[feedly background tabs] ' + event);
     if (event.name === 'settings') {
-        shortcutKey = event.message.shortcutKey.charCodeAt(0);
+        shortcutKey = event.message.shortcutKey;
         if (debug) console.log('[feedly background tabs] shortcut key is ' + shortcutKey);
     }
 }
