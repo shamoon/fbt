@@ -47,16 +47,29 @@ window.addEventListener('keydown', function(event) {
      var url = '';
      if (!current.hasAttribute('data-alternate-link')) {
         var currentChild;
-        var children = current.getElementsByTagName('*');
+        // try anchors
+        var children = current.getElementsByTagName('a');
         for (var i = 0; i < children.length; i++) {
-           currentChild = children[i];
-           if (currentChild.hasAttribute('data-alternate-link')) {
-              if (debug) console.log('[feedly background tabs] found url on child:');
-              if (debug) console.log(currentChild);
-              url = currentChild.getAttribute('data-alternate-link');
-              break;
-           }
+            currentChild = children[i];
+            if (currentChild.classList.contains("entryTitle")) {
+                if (debug) console.log('[feedly background tabs] found url on anchor:');
+                if (debug) console.log(currentChild);
+                url = currentChild.getAttribute('href');
+            }
         }
+        // look for child data-alternate-link
+        if (!url) {
+             children = current.getElementsByTagName('*');
+             for (var i = 0; i < children.length; i++) {
+                currentChild = children[i];
+                if (currentChild.hasAttribute('data-alternate-link')) {
+                   if (debug) console.log('[feedly background tabs] found url on child:');
+                   if (debug) console.log(currentChild);
+                   url = currentChild.getAttribute('data-alternate-link');
+                   break;
+                }
+             }
+         }
      } else {
         url = current.getAttribute('data-alternate-link');
      }

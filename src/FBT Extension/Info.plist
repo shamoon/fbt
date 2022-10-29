@@ -57,7 +57,7 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019-2021 Michael Shamoon. All rights reserved.</string>
+	<string>Copyright © 2019-2022 Michael Shamoon. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
 	<string>Add a shortcut key to open a new tab for the selected item in Feedly. Original ext by nox.cx/zakj</string>
 	<key>SFSafariExtensionBundleIdentifiersToUninstall</key>

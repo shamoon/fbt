@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,18 +49,6 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Help" id="wpr-3q-Mcd">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
-                                    <items>
-                                        <menuItem title="FBT RSS Background Tabs Help" keyEquivalent="?" id="FKE-Sm-Kum">
-                                            <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -99,19 +87,22 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="FBT_RSS_Background_Tabs" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="455"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="657" height="582"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="42" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLV-xE-AGT">
-                                <rect key="frame" x="0.0" y="34" width="480" height="376"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="50" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLV-xE-AGT">
+                                <rect key="frame" x="0.0" y="34" width="657" height="482"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
-                                        <rect key="frame" x="176" y="121" width="128" height="255"/>
+                                        <rect key="frame" x="265" y="282" width="128" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="6nN-OL-YuF"/>
+                                        </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="AppIcon" id="Hhb-TZ-Dhg"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
-                                        <rect key="frame" x="206" y="63" width="68" height="16"/>
+                                        <rect key="frame" x="295" y="216" width="68" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="App Name" id="S7v-7o-3vW">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -119,7 +110,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
-                                        <rect key="frame" x="74" y="-7" width="332" height="32"/>
+                                        <rect key="frame" x="73" y="139" width="511" height="32"/>
                                         <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -131,6 +122,17 @@ DQ
                                             </connections>
                                         </buttonCell>
                                     </button>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="568" translatesAutoresizingMaskIntoConstraints="NO" id="9X2-qA-L8i">
+                                        <rect key="frame" x="43" y="0.0" width="572" height="96"/>
+                                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" state="on" id="20q-w2-HJk">
+                                            <font key="font" metaFont="system"/>
+                                            <string key="title">FBT RSS Background Tabs is a Safari Extension that allows you to set a shortcut key (default v) that will open a Feedly article in a new tab *behind* the current one. You can customize the key used for this by clicking the toolbar button and entering a new shortcut key. Note that if you have the extension enabled you do not need to keep the tooldbar item visible.
+
+For support please visit https://github.com/shamoon/fbt/issues</string>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ooh-eV-eLQ" firstAttribute="leading" secondItem="ZLV-xE-AGT" secondAttribute="leading" constant="80" id="Z4l-Ib-SnT"/>
@@ -140,8 +142,10 @@ DQ
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -161,7 +165,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="628.5"/>
+            <point key="canvasLocation" x="163.5" y="696"/>
         </scene>
     </scenes>
     <resources>
