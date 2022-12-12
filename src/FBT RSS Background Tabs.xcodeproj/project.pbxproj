@@ -11,7 +11,7 @@
 		11E6EA902315A5C70043CCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E6EA8E2315A5C70043CCD6 /* Main.storyboard */; };
 		11E6EA922315A5C70043CCD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EA912315A5C70043CCD6 /* ViewController.swift */; };
 		11E6EA942315A5C80043CCD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E6EA932315A5C80043CCD6 /* Assets.xcassets */; };
-		11E6EA9B2315A5C80043CCD6 /* FBT RSS Background Tabs Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11E6EA9A2315A5C80043CCD6 /* FBT RSS Background Tabs Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11E6EA9B2315A5C80043CCD6 /* FBT RSS Background Tabs Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 11E6EA9A2315A5C80043CCD6 /* FBT RSS Background Tabs Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		11E6EAA02315A5C80043CCD6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E6EA9F2315A5C80043CCD6 /* Cocoa.framework */; };
 		11E6EAA32315A5C80043CCD6 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EAA22315A5C80043CCD6 /* SafariExtensionHandler.swift */; };
 		11E6EAA52315A5C80043CCD6 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6EAA42315A5C80043CCD6 /* SafariExtensionViewController.swift */; };
@@ -31,15 +31,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		11E6EAB42315A5C80043CCD6 /* Embed App Extensions */ = {
+		11E6EAB42315A5C80043CCD6 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				11E6EA9B2315A5C80043CCD6 /* FBT RSS Background Tabs Extension.appex in Embed App Extensions */,
+				11E6EA9B2315A5C80043CCD6 /* FBT RSS Background Tabs Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -144,7 +144,7 @@
 				11E6EA832315A5C70043CCD6 /* Sources */,
 				11E6EA842315A5C70043CCD6 /* Frameworks */,
 				11E6EA852315A5C70043CCD6 /* Resources */,
-				11E6EAB42315A5C80043CCD6 /* Embed App Extensions */,
+				11E6EAB42315A5C80043CCD6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -180,7 +180,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = MSWD;
 				TargetAttributes = {
 					11E6EA862315A5C70043CCD6 = {
@@ -329,6 +329,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -392,6 +393,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -418,7 +420,8 @@
 				CODE_SIGN_ENTITLEMENTS = Feedly_Background_Tabs.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -427,7 +430,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -442,7 +446,8 @@
 				CODE_SIGN_ENTITLEMENTS = Feedly_Background_Tabs.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT Extension/Info.plist";
@@ -451,7 +456,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -469,7 +475,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
@@ -477,7 +484,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -494,7 +502,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 21;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 6236H6BCAU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "FBT RSS Background Tabs/Info.plist";
@@ -502,7 +511,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.mswd.feedlybackgroundtabs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
