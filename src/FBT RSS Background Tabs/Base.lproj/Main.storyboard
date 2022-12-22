@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -122,11 +121,11 @@ DQ
                                             </connections>
                                         </buttonCell>
                                     </button>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="568" translatesAutoresizingMaskIntoConstraints="NO" id="9X2-qA-L8i">
-                                        <rect key="frame" x="43" y="70" width="572" height="64"/>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="590" translatesAutoresizingMaskIntoConstraints="NO" id="9X2-qA-L8i">
+                                        <rect key="frame" x="32" y="70" width="594" height="64"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" allowsEditingTextAttributes="YES" id="20q-w2-HJk">
                                             <font key="font" metaFont="system"/>
-                                            <string key="title">FBT RSS Background Tabs is a Safari Extension that allows you to set a shortcut key (default v) that will open a Feedly article in a new tab *behind* the current one. You can customize the key used for this by clicking the toolbar button and entering a new shortcut key. Note that if you have the extension enabled you do not need to keep the tooldbar item visible.</string>
+                                            <string key="title">FBT RSS Background Tabs is a Safari Extension that allows you to set a shortcut key (default 'v') that will open a Feedly article in a new tab *behind* the current one. You can customize the key used for this by clicking the toolbar button and entering a new shortcut key. Note that if you have the extension enabled you do not need to keep the tooldbar item visible.</string>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
