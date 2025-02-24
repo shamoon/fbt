@@ -40,7 +40,9 @@ window.addEventListener('keydown', function(event) {
             var children = currentArticle.getElementsByTagName('a');
             for (var i = 0; i < children.length; i++) {
                 currentChild = children[i];
-                if (currentChild.classList.contains("entryTitle") || currentChild.classList.contains("Article__title--read")) {
+                if (currentChild.classList.contains("entryTitle") ||
+                    currentChild.classList.contains("Article__title--read") ||
+                    currentChild.classList.contains("ArticleTitle")) {
                     if (debug) console.log('[feedly background tabs] found url on anchor:');
                     if (debug) console.log(currentChild);
                     url = currentChild.getAttribute('href');
