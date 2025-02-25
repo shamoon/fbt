@@ -24,13 +24,14 @@ window.addEventListener('keydown', function(event) {
       for (var i = 0; i < articles.length; i++) {
           article = articles[i];
           var rect = article.getBoundingClientRect();
+          if (debug) console.log(article, rect, window.innerHeight);
           if (rect.top < window.innerHeight && rect.bottom >= 0) {
-              // partially visible, but keep going to find last one
               currentArticle = article;
+              break;
           }
-     }
+      }
       
-     var url = '';
+      var url = '';
       if (currentArticle) {
          if (debug) console.log('[feedly background tabs] current article:');
          if (debug) console.log(currentArticle);
@@ -42,7 +43,7 @@ window.addEventListener('keydown', function(event) {
                 currentChild = children[i];
                 if (currentChild.classList.contains("entryTitle") ||
                     currentChild.classList.contains("Article__title--read") ||
-                    currentChild.classList.contains("ArticleTitle")) {
+                    currentChild.classList.contains("ArticleTitle--read")) {
                     if (debug) console.log('[feedly background tabs] found url on anchor:');
                     if (debug) console.log(currentChild);
                     url = currentChild.getAttribute('href');
@@ -78,8 +79,7 @@ window.addEventListener('keydown', function(event) {
 
 
 function messageHandler(event) {
-    console.log(event)
-   if (debug) console.log('[feedly background tabs] ' + event);
+    if (debug) console.log('[feedly background tabs] ' + event);
     if (event.name === 'settings') {
         shortcutKey = event.message.shortcutKey;
         if (debug) console.log('[feedly background tabs] shortcut key is ' + shortcutKey);
